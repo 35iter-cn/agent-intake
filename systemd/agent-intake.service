@@ -1,0 +1,8 @@
+[Unit]
+Description=intake loop: scan the GitHub board, open backend issues and one Slack channel (read-only)
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/code
+ExecStart=%h/code/agent-intake/intake.sh
+TimeoutStartSec=20min
